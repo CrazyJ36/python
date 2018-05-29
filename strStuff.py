@@ -1,4 +1,6 @@
-﻿# text organization on screen
+#!/usr/bin/env python
+
+# text organization on screen
 print("String organization with newlines and tabs:")
 print("'line 1 \nand new line 2\n\t<- tabbed, done'\n")
 # here's a string we'll use
@@ -56,3 +58,6 @@ print("convert int to string: %s" %(1))
 # quicker cleaner way to define multiple variables using item.format()
 print("\ncleaner way to define in-line variables: ('x: {x} y: {y}'.format(x='x',y='y'))")
 print('item1: {x} item2: {y}'.format(x='one',y='two'))
+# Generally single quotes('') or double quotes("") do not effect how python reads strings
+print("double quotes")
+print('single quotes')
