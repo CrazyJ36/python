@@ -1,5 +1,0 @@
-print("1 + 2 =", 1+2)
-print("3 - 2 =", 3-2)
-print("2 x 2 =", 2*2)
-print("6 divided by 2 =", int(6/2))
-print("1 + 2, plus 1 + 3 =", (1+2) + (1+3))
