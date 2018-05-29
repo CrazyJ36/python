@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # As printing A string and A number type like:
 # $ print("text" + 3)
 # errors as 'cannot concetanate str and int',

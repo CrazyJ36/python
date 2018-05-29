@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 print("add 2 numbers")
 num1=int(input("input num1: "))
 num2=int(input("input num2 : "))
