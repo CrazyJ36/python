@@ -1,12 +1,15 @@
 from cursesmenu import *
 from cursesmenu.items import *
 
+def chTitle():
+  ntitle = input("type title")
+  title = ntitle
+
 title = 'Title'
+
 menu = CursesMenu(title)
 
-function_item = FunctionItem("python method",
- input, ["type input"])
-
+function_item = FunctionItem("python method", chTitle())
 
 command_item = CommandItem("console command", "touch file.txt")
 
