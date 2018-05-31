@@ -1,8 +1,6 @@
 import web
 
-urls = (
-    '/', 'index'
-)
+urls = ('/', 'index')
 
 class index:
     def GET(self):
