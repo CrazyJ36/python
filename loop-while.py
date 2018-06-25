@@ -14,4 +14,11 @@ while i < 5:
   print(i)
   i += 1  # i equals value of i plus 1
 
+  # the 'break' keyword can be used anytime
+  # in A loop to end immediately
+
+  # also, 'continue will jump back to the top
+  # this can be used with if to skip an iteration
+
+  # don't use break or continue outside of a loop
 print("done")

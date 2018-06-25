@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+# string can be thought of as a list of characters
+#   that can not be changed
+
 # text organization on screen
 print("String organization with newlines and tabs:")
 print("'line 1 \nand new line 2\n\t<- tabbed, done'\n")
@@ -26,7 +29,7 @@ print("\ntemporarily add text to string (string + 'more text'):\n",string + ' an
 print("\npermanently change the sequence of string value (string = string + new text):")
 string = string + " and more text"
 print(string)
-# changing the string text for the next set of examples 
+# changing the string text for the next set of examples
 print("\nim changing the string value to smaller stuff:")
 string = "Text"
 print(string)
