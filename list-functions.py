@@ -29,3 +29,27 @@ printnList()
 
 # list.count(obj) returns number of times am item occurs in A list.
 print("Item 'b' occurs", nList.count('b'), "times.")
+
+# list.remove(obj) removes first occurence of an object from a list
+nList.remove('b')
+print("Removed first occurance of 'b'")
+printnList()
+
+# remove first c
+nList.remove('c')
+# add new c at the end to make list alphabetical order
+nList.append('c')
+# add d to make list re-usable for following exaples
+nList.append('d')
+print("re-instantiate list:")
+printnList()
+
+# shows del(list[list.index('c')])
+print("delete specific index of character d:")
+del(nList[nList.index('d')])
+printnList()
+
+# reverse objects
+print("reverse the list:")
+nList.reverse()
+printnList()
