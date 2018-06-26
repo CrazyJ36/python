@@ -8,7 +8,7 @@
 # a condition for trueness until
 # it returns false. Then code continues.
 
-i = 0  # for iterations
+i = 0  # to-be iterations counter
 
 while i < 5:
   print(i)

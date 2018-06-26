@@ -4,13 +4,15 @@
 # you can use A loop with A iteration counter
 
 words = ["hello", "world", "foo", "bar"]
-print("initial list:", words)
+print("Initial list:", words)
 
 counter = 0
 
-print("adding '!' to each item:")
+# access list items in loop through their indices ,
+# print them with additional vharacter
+print("Adding '!' to each item:")
 while counter < 4:
-  print(words[counter] + "!")
+  print(words[counter] + '!')
   counter += 1
 
 print("done")
