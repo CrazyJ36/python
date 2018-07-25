@@ -1,19 +1,20 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # string can be thought of as a list of characters
 #   that can not be changed
 
 # text organization on screen
-print("String organization with newlines and tabs:")
-print("'line 1 \nand new line 2\n\t<- tabbed, done'\n")
-# here's a string we'll use
-string = "Here's A string of text"
-print("\na predefined string to work with 's = text':")
+print("A string is simply some text, or string of characters.\n")
+print("Text organization with newlines(\\n) and tabs(\\t):")
+print("line 1 \nand new line 2\n\t<- tabbed")
+# here's a string variable we'll use
+string = "string of text"
+print("\nA defined string variable to work with (s = 'text') or (s = \"text\"), then print(text):")
 print(string)
 # show length of characters in string  sequence
-print("\nhow many characters in string ' len(string)':\n",len(string))
+print("\nNumber of characters in string: text? 'len(string)':\n",len(string))
 # indexing
-print("\nzero index of string '(string[0])':\n",string[0])
+print("\nZero index, or first character of string 'print(string[0])':\n",string[0])
 print("\none index of string '(string[1])':\n",string[1])
 # slicing shows only parts of strings for specific uses
 print("\nin slicing, only 'string[:]' prints everything:\n", string[:])
