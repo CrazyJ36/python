@@ -1,40 +1,68 @@
 from collections import deque
 
+I = "1. Ionian"
+D = "2. Dorian"
+P = "3. Phrygian"
+Ly = "4. Lydian"
+M = "5. Mixolydian"
+A= "6. Aeolian"
+Lo = "7. Locrian"
+E = "8. Exit"
+H = "Only [1-6] as input will do stuff"
+
+print("Musical Modes")
 def print_menu():
-    print 67 * "-"
-    print "1. Major"
-    print "2. Major 1st Inversion"
-    print "3. Menu Option 3"
-    print "4. Menu Option 4"
-    print "5. Exit"
-    print "6. Show Menu Again"
-    print 67 * "-" + "\n"
+    print(20 * "-")
+    print(I)
+    print(D)
+    print(P)
+    print(Ly)
+    print(M)
+    print(A)
+    print(Lo)
+    print(E)
+    print("9. Show Menu")
+    print(20 * "-" + "\n")
+    print("Type an option [1-6]")
 
 print_menu()
-majorseq=deque('02212221')
-majornotes=deque('CDEFGAB')
 loop = True
+choice = None
+
 while loop:
-    choice = int(input("Enter menu choice[1-6]\n\n"))
+
+    seq=deque('CDEFGAB')
+
+    try:
+        choice = int(input())
+    except ValueError:
+        print(H)
     if type(choice) is not int:
-        print "only digits will do stuff"
-        print_menu()
-    if choice==1:
-        print "Major"
-        print list(majornotes)
-        print list(majorseq)
+        print(H)
+
+    elif choice==1:
+        print(list(seq), I)
     elif choice==2:
-        print "Major 1st Inversion\n\n"
-        majornotes.rotate(-1)
-        majorseq.rotate(-1)
-        print list(majornotes)
-        print list(majorseq)
+        seq.rotate(-1)
+        print(list(seq), D)
     elif choice==3:
-        print "Menu 3 has been selected"
+        seq.rotate(-2)
+        print(list(seq), P)
     elif choice==4:
-        print "Menu 4 has been selected"
+        seq.rotate(-3)
+        print(list(seq), Ly)
     elif choice==5:
-        print "Quitting"
-        loop=False
+        seq.rotate(-4)
+        print(list(seq), M)
     elif choice==6:
-         print_menu()
+        seq.rotate(-5)
+        print(list(seq), A)
+    elif choice==7:
+        seq.rotate(-6)
+        print(list(seq), Lo)
+
+    elif choice==8:
+        print(E)
+        loop=False
+    elif choice==9:
+        show_menu()
