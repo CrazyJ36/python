@@ -10,8 +10,10 @@
 # ValueError: a function is called on a value of the correct
 # type, but with an inappropriate value.
 try:
-  print(1)
-except NameError:    # catch errors
+  print(invalidVar)
+except NameError:    # if there's an error, handle it.
+# use except without exception argumement specified
+# to catch all(could lead to unfound errors).
   print('Name error')
 finally:    # finally runs no matter if error occured or not
   print('Done')

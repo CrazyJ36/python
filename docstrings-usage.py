@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-print("code started.")
-
 def myDocPrintFunc():
   """
    -----
@@ -20,10 +18,7 @@ def myDocPrintFunc():
    help(mfunc) or
    print(help(mfunc))
    -----
-   This myPrint function
-   simply prints A string.
   """
-  print("function done")
 
 task = input("""Use:
 i - for interactive help
@@ -35,7 +30,6 @@ elif task == "h":
   print(myDocPrintFunc.__doc__)
 
 myDocPrintFunc()
-print("app done")
 
 # As opposed to docstring,
 # A source code comment (# comment)
