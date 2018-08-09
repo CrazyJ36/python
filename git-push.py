@@ -3,7 +3,7 @@ import sys
 
 # Check that git is installed
 if os.path.isfile("C:\Program Files\Git\git-cmd.exe") == False:
-  print("Git not installed. Install to continue.")
+  print("Git not installed. Install to continue, or simply change\npath in code to point to proper exe.")
   sys.exit(0)
 
 # Check proper message arguments, define commit message.
