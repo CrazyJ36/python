@@ -1,5 +1,6 @@
 import os
 import sys
+# Windows only
 
 # Check that git is installed
 if os.path.isfile("C:\Program Files\Git\git-cmd.exe") == False:
@@ -10,7 +11,7 @@ if os.path.isfile("C:\Program Files\Git\git-cmd.exe") == False:
 try:
   msg = "git commit -m " + "\"" + sys.argv[1] + "\""
 except IndexError:
-  print("Run as: git-push-win.py \"commit message\"")
+  print("Run as: git-push.py \"commit message\"\nFor Windows only.")
   sys.exit(0)
 
 # prewrite git commands
@@ -22,11 +23,11 @@ def gitwork():
 # review changes
 path = os.getcwd()
 print("Push changes in: " + path)
-#print(path)
 print("with message: " + sys.argv[1])
-#print(msg)
+
 check = input("[y,n]: ")
 
+# Ask user to continue.
 if check == "y":
   gitwork()
 elif check == "n":
@@ -35,5 +36,6 @@ elif check == "n":
 else:
   print("Unknown response, aborted.")
 
+# Exit
 print("Done.")
 sys.exit(0)
