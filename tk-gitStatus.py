@@ -1,16 +1,17 @@
 # This checks git status in any platform on any local repo
 import os
-import sys
 from tkinter import *
 
 win = Tk()
 win.pack_propagate(0)
-win.geometry("500x500")
+win.geometry("600x500")
 win.title(string="App")
 repo = Entry(win, text="repo name")
 
 
-if sys.platform == "win32":
+if sys.platform == "win32" and os.scandir("C:\\Users\\Thomas"):
+    devdir = "C:\\Users\\Thomas\\Development\\"""
+elif sys.platform == "win32" and os.scandir("C:\\Users\\CrazyJ36"):
     devdir = "C:\\Users\\CrazyJ36\\Development\\"""
 elif sys.platform == "linux":
     devdir = "/home/thomas/development/"
@@ -30,7 +31,7 @@ def gitcmd():
     outtxt = Label(win, text=out)
     outtxt.pack()
 
-
+if win.keys(win, ENTER)
 btn = Button(win, text="Check Git Repo", command=lambda: gitcmd())
 repo.pack()
 btn.pack()
