@@ -1,3 +1,5 @@
+# there is probably a built-in way to check username
+
 import os
 
 if os.scandir("C:\\Users\\Thomas"):
