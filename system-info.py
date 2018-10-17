@@ -1,4 +1,4 @@
-# Shebang left out so sys.version_info can be called on different python version.
+#!/usr/bin/env python3
 
 import sys
 

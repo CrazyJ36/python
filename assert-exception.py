@@ -13,5 +13,5 @@ assert 1 + 2 == 3, "log message if false" # True, no assert problem
 print("Done, code successful.")
 
 print("Trying to assert A false expression")
-assert 1 == 2, "Optional false Assert message"
+assert 1 == 2, "My false Assert message"
 # Wrap false assert in try/except to handle exception.
