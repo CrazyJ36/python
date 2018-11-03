@@ -9,7 +9,7 @@
 # program terminates immediatly, stopping execution.
 
 print("asserting A true expression")
-assert 1 + 2 == 3, "log message if false" # True, no assert problem
+assert 1 + 2 == 3, "This is the log message if false" # True, no assert problem
 print("Done, code successful.")
 
 print("Trying to assert A false expression")
