@@ -9,15 +9,16 @@ win.geometry("400x300")
 repo = Entry(win)
 
 if sys.platform == "win32" and os.environ['USERNAME'] == "Thomas":
-    devdir = "C:\\Users\\Thomas\\Development\\"""
+    devdir = "C:\\Users\\Thomas\\Development\\"
 elif sys.platform == "win32" and os.environ['USERNAME'] == "CrazyJ36":
-    devdir = "C:\\Users\\CrazyJ36\\Development\\"""
+    devdir = "C:\\Users\\CrazyJ36\\Development\\"
+elif sys.platform == "win32" and os.environ['USERNAME'] == "thomas":
+    devdir = "C:\\Users\\thomas\\Development\\"
 elif sys.platform == "linux":
     devdir = "/home/thomas/development/"
 else:
     envwarn = Label(win, text="failed to get environment")
     envwarn.pack()
-
 
 def gitcmd():
     cmdstr = "cd " + devdir + repo.get() + " && git status"
