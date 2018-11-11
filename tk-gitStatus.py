@@ -8,6 +8,7 @@ win.title(string="Git Status")
 win.geometry("400x300")
 repo = Entry(win)
 
+# easier than below, use os.environ['HOME'] + regex for development dir name
 if sys.platform == "win32" and os.environ['USERNAME'] == "Thomas":
     devdir = "C:\\Users\\Thomas\\Development\\"
 elif sys.platform == "win32" and os.environ['USERNAME'] == "CrazyJ36":
