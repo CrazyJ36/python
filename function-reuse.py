@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# the parameters(x,y) of my add can be set directly
+# the parameters(x,y) of myAdd can be set directly
 # set when calling the function.
 def myAdd(x, y):
   return x + y
