@@ -10,7 +10,7 @@ nums = [1,2,3]
 print(nums[1]) # print second index, 2.
 
 strings = ["one", "two", "three",] # comma after last
-				   # item is optional, but valid.
+								   # item is optional, but valid.
 print(strings[1])
 
 characters = ['a','b','c']
@@ -31,4 +31,4 @@ str = "string"
 print(str[2]) # third character in string
 
 # you can't call an index position that does not exist,
-#   this causes an out-of-bounds error.
+# this causes an out-of-bounds error.
