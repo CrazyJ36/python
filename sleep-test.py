@@ -1,9 +1,7 @@
+#!/usr/bin/env python3
 import time
 
-print("wait")
-
-time.sleep(1) # wait one second
-
+print("Waiting two seconds...")
+time.sleep(2) # Wait for two seconds, continue.
 print("done")
-
-exit()
+exit(0)
