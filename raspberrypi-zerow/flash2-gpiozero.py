@@ -1,3 +1,5 @@
+# requires to install python3-gpiozero
+
 from gpiozero import LED
 from time import sleep
 
