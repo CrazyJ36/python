@@ -21,7 +21,6 @@ def execute_cmd(cmd_string):
 		print("Command terminated with error")
 	input("Press enter")
 	print("")
-
 x = 0
 
 while x != ord('4'):
