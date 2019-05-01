@@ -4,7 +4,9 @@
 import RPi.GPIO as GPIO
 from time import sleep # import time functions to put a timed wait on this process
 
-pin = 27 # int number reference variable to be used as bcm pin number
+# int number reference variable to be used as bcm pin number
+# '27' is Pin according to GPIO and BCM. 'Position' 13 physically on board. File is named this way.
+pin = 27
 
 # GPIO is as imported above, a reference to RPi.GPIO
 GPIO.setmode(GPIO.BCM) # set the GPIO module working mode to the Broadcom pin # system
@@ -15,7 +17,5 @@ sleep(1) # put this programs process to sleep for one second
 GPIO.output(pin, GPIO.LOW) # output power to pin as low(off)
 
 GPIO.cleanup()
-print "Here's info about your pi:"
-print GPIO.RPI_INFO
-exit() # exit after one flash of let as this was A test program.
+exit() # exit after one flash of led as this was A test program.
 
