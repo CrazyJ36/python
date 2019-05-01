@@ -10,3 +10,4 @@ w, h = 'world', "hello"
 print(h, w)
 print(h + " " + w)
 print(h + " ", w)
+print(h + w)
