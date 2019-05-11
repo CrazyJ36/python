@@ -8,7 +8,7 @@ btn = Button(14)
 btn2 = Button(26)
 led = LED(15)
 
-print "press right button for led, left button to exit"
+print("press right button for led, left button to exit")
 
 while True:
   if btn.is_pressed:
@@ -18,5 +18,5 @@ while True:
   elif btn2.is_pressed:
     btn.close()
     led.close()
-    print "done"
+    print("done")
     exit(0)
