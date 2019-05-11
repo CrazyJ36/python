@@ -1,8 +1,7 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 from gpiozero import Button
 from gpiozero import LED
 from time import sleep
-from signal import pause
 
 # Buttons are 14 and 26
 btn = Button(14)
