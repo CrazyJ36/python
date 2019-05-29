@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+
+print("Loading gpiozero..")
+
 from gpiozero import Button, LEDBoard
 from time import sleep
 
@@ -43,6 +46,6 @@ while True:
       btn1_press_count = btn1_press_count + 1
 
   if btn2.is_pressed:
-    print("Exiting..")
+    print("\nExiting..")
     exit(0)
 

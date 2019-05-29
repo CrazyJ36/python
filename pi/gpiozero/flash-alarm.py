@@ -16,11 +16,11 @@ print("Flashing two leds like an alarm..")
 while(x < 5):
   print(x, "/4")
   led1.on()
-  sleep(1)
+  sleep(0.5)
   led1.off()
 
   led2.on()
-  sleep(1)
+  sleep(0.5)
   led2.off()
   x = x + 1
 
