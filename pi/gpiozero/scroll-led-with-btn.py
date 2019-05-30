@@ -5,7 +5,7 @@ print("Loading gpiozero..")
 from gpiozero import Button, LEDBoard
 from time import sleep
 
-# LEDs' in indexed array
+# LEDs' in indexed array with gpiozero's LEDBoard
 leds = LEDBoard(15, 21, 19, 4)
 
 # if you get GPIOPinInUse error when using btns,leds in a loop,
