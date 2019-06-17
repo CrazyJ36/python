@@ -1,0 +1,8 @@
+- test
+- file
+- with
+- program
+- that
+- removes
+- these
+- dashes
