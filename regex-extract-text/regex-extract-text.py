@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-
-# Guide:
+print() # space for program text
+# Regex Mini Guide:
 # ^  -  Match from/at beginning of line
 # $  -  Match at end of line
 # .  -  Match any character (wildcard)
@@ -27,25 +27,19 @@ for line in file:
 
 del line
 file.close()
-print("\n")
+print()
 
 # Start
-print("getting only 'sender names' from conversation:\n")
+print("\ngetting only 'sender names' from conversation:\n")
 file = open("text.txt")
-# get lines from file
+# get lines from file by generic for loop
 for line in file:
-# strip lines into strings
-# str.rstrip() only removes ending, or 'trailing'
-# whitespace(spaces). if str.rstrip('ing') has A parameter,
-# it removes only the given characters that occur at the
-# end of the string.
-  line = line.rstrip()
 # if any line has "from:" text, print it
   if re.search('from:', line):
-    print(line)
+    print(line, end='')
 
 # exit
 del line
 file.close()
-print("\nDone. Exiting...")
+print("\n\nDone. Exiting...")
 exit(0)
