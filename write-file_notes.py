@@ -2,7 +2,7 @@
 
 # This creates/appends personal notes,
 # one at A time, run after run, to A
-# notes.txt file at home directory.
+# notes.txt file at home directory(or at up two dirs).
 
 op = open("../../notes.txt", 'a')
 text = input("New note:\n")
