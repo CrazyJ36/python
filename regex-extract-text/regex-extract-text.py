@@ -29,12 +29,16 @@ del line
 file.close()
 print("\n")
 
-# Start extracting text
+# Start
 print("getting only 'sender names' from conversation:\n")
 file = open("text.txt")
 # get lines from file
 for line in file:
 # strip lines into strings
+# str.rstrip() only removes ending, or 'trailing'
+# whitespace(spaces). if str.rstrip('ing') has A parameter,
+# it removes only the given characters that occur at the
+# end of the string.
   line = line.rstrip()
 # if any line has "from:" text, print it
   if re.search('from:', line):
