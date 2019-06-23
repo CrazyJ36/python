@@ -7,7 +7,7 @@ print() # space for program text
 # \s -  Match white-spase characters (include spaces)
 # \S -  Match non white-spase
 # *  -  Repeat looking for character zero or more
-#       times(so .* is like bash wildcard)
+#       times(so .* is like bash wildcard). + does same.
 # *? -  Repeats A character zero or more(non-greedy form)
 # [aeiou] - Match A single character in A the set
 # [^XYZ]  - Match A single characternot listed in set
