@@ -7,5 +7,6 @@
 # we should use the string funtion itself to make
 # the number type A string:
 print("text " + str(1))
-print("text", str(1)) # you can use commas or plus's to put parameters on one line, just
-	              # not with improper types.
+print("text", str(1))
+# you can use commas or plus's to put parameters
+# on one line, just not with improper types.
