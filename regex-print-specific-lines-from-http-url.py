@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# get only lines that 'start with something' from site
+
 import urllib.request
 import re
 
