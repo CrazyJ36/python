@@ -13,6 +13,7 @@ leds = LEDBoard(19,21,15,4)
 btns = ButtonBoard(26,20,18,14)
 
 print("Press A button for each led..")
+print("Ctrl-C to exit")
 
 while True :
   try:
