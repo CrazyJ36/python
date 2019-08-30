@@ -1,19 +1,19 @@
 def lineL():
- print("-"*5)
+    print("-"*5)  # 'dash' 5 times to make A line
 
 def lineR():
- print("\t\t","-"*5)
+    print("\t\t","-"*5)  # two tabs makes 'space', then 'dash' lines
 
 def lineC():
- print("\t","-"*5)
+    print("\t","-"*5)
 
 inp = input("choose your side (left, right, center): ")
 
 if inp=='right':
- lineR()
+    lineR()
 elif inp=='left':
- lineL()
+    lineL()
 elif inp=='center':
- lineC()
+    lineC()
 else:
- print("you didn't enter: left, right, or center")
+    print("you didn't enter: left, right, or center")
