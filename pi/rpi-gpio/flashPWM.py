@@ -5,7 +5,7 @@ import RPi.GPIO as GPIO
 from time import sleep
 
 # Choose pin # to light
-pin = 15
+pin =  23 ##  WAS 15
 # Must always setup your used gpio pin..
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(pin, GPIO.OUT)

@@ -9,7 +9,7 @@ GPIO.setmode(GPIO.BCM)
 
 print("Testing LEDs..")
 # LED PINS
-l = [15, 21, 19, 4]
+l = [4, 18, 22, 23]
 # Setup all
 for n in l:
   GPIO.setup(n, GPIO.OUT)

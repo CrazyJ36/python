@@ -5,7 +5,7 @@ import RPi.GPIO as GPIO
 from time import sleep
 
 GPIO.setmode(GPIO.BCM)
-pin_list = [19, 4] # set multiple ints in list
+pin_list = [22, 23] # set multiple ints in list
 GPIO.setup(pin_list, GPIO.OUT)
 GPIO.output(pin_list, GPIO.HIGH)
 sleep(1)
