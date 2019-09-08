@@ -4,9 +4,9 @@ from gpiozero import LED
 from time import sleep
 
 # Buttons are 14 and 26
-btn = Button(14)
-btn2 = Button(26)
-led = LED(15)
+btn = Button(27)
+btn2 = Button(24)
+led = LED(22)
 
 print("press right button for led, left button to exit")
 
