@@ -6,18 +6,18 @@ from gpiozero import Button, LEDBoard
 from time import sleep
 
 # LEDs' in indexed array with gpiozero's LEDBoard
-leds = LEDBoard(15, 21, 19, 4)
+leds = LEDBoard(18, 4, 22, 23)
 
 # if you get GPIOPinInUse error when using btns,leds in a loop,
 # you may have to close, the reinitiate buttons after any button press,
 # as the btn might still be used by led. place the button declarations
 # in loop, then close after find-the-press loop done. This would be slow.
-btn1 = Button(14)
-btn2 = Button(26)
+btn1 = Button(17)
+btn2 = Button(5)
 
 # instructions
-print("""Press right button to alternate through LEDs'.
-Press left button to exit""")
+print("""Press button 1 to alternate through LEDs'.
+Press button 4 to exit.""")
 
 # how led reacts to btn press
 def led_flash(led_num):
