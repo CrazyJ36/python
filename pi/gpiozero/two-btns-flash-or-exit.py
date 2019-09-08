@@ -3,12 +3,12 @@ from gpiozero import Button
 from gpiozero import LED
 from time import sleep
 
-# Buttons are 14 and 26
+# Buttons 27 and 24
 btn = Button(27)
 btn2 = Button(24)
 led = LED(22)
 
-print("press right button for led, left button to exit")
+print("From left-to-right, press button 2 for led 3, button 3 to exit")
 
 while True:
   if btn.is_pressed:

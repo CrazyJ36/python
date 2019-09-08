@@ -6,11 +6,10 @@ from gpiozero import LEDBoard, ButtonBoard
 from signal import pause
 
 # Image representaion
-# leds:  19                4
-# leds:  21                15
-# btns:  26    20    18    14
-leds = LEDBoard(19,21,15,4)
-btns = ButtonBoard(26,20,18,14)
+# leds:  4     18    22    23
+# btns:  17    27    25    5
+leds = LEDBoard(18, 4, 22, 23)
+btns = ButtonBoard(17, 27, 24, 5)
 
 print("Press A button for each led..")
 print("Ctrl-C to exit")
