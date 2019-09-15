@@ -9,7 +9,7 @@ from signal import pause
 from gpiozero import Button, ButtonBoard, LEDBoard
 
 
-usage = "Command error..\nUsage: ./perma-proto-or.. [leds, buttons, switch, all]"
+usage = "Command error..\nUsage: ./perma-proto-org... [leds, buttons, switch, all]"
 try:
   cmd = sys.argv[1]
 except IndexError:
