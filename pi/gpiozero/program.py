@@ -1,30 +1,21 @@
 #!/usr/bin/env python3
 
-# This test my "organized" hardware setup on perma-proto
-
-print("Loading.. Press Ctrl-c to exit A test.\n")
+print("Loading default program...\n")
 import sys
 from time import sleep
 from signal import pause
 from gpiozero import Button, ButtonBoard, LEDBoard
 
 
-usage = "Command error..\nUsage: ./perma-proto-org... [leds, buttons, switch, all]"
-try:
-  cmd = sys.argv[1]
-except IndexError:
-  print(usage)
-  exit(0)
-
-
 try:
   leds = LEDBoard(24, 7, 6)
-  btns = ButtonBoard(23, 27, 22, 25, 9, 5, 8, )
+  btns = ButtonBoard(23, 27, 22, 25, 9, 5, 8)
   switch = Button(4)
 except Exception:
   print("gpiozero or pin didn't load correctly, Exiting..")
   exit(0)
 
+print("You can now use default program!")
 
 def test_leds():
   try:
@@ -54,7 +45,9 @@ def test_btns():
   while True:
     try:
       if btns.is_pressed:
-        print(btns.value)
+        print(btns.value, end='')
+
+        print(" pressed")
         sleep(0.2)
     except KeyboardInterrupt:
       print("Exiting\n\n")
