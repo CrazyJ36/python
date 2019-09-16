@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+# also, use 'function(**kwargs)' like
+# function(name1 = value1, name2 = value2)
+# should be able to get named buttons from key/value
+
 from time import sleep
 from gpiozero import ButtonBoard
 
