@@ -4,20 +4,15 @@
 # This is set to run on boot at:
 # /etc/rc.local
 
-from gpiozero import LED
+from gpiozero import LED, Button
 from time import sleep
 
-led1 = LED(24)
-led2 = LED(7)
+led = LED(6)
+btn = Button(8)
 
-x = 1
-while(x < 5):
-  led1.on()
-  sleep(0.3)
-  led1.off()
-  led2.on()
-  sleep(0.3)
-  led2.off()
-  x = x + 1
-
-exit()
+while True:
+  led.on()
+  sleep(1)
+  led.off()
+  sleep(1)
+  if btn.is_pressed: exit()

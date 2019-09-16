@@ -14,7 +14,7 @@ led2 = LED(7)
 x = 1
 print("Flashing two leds like an alarm..")
 while(x < 5):
-  print(x, "/4")
+  print(x, "/ 4", "flashing..")
   led1.on()
   sleep(0.5)
   led1.off()

@@ -15,7 +15,7 @@ while True:
   try:
     if btns[0].is_pressed:
       print("button one pressed")
-    elif btns[1].is_pressed:
+    if btns[1].is_pressed:
       print("button two pressed")
     sleep(0.2)
 
