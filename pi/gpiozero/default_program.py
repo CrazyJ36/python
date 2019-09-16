@@ -13,10 +13,10 @@ led2 = LED(7)
 x = 1
 while(x < 5):
   led1.on()
-  sleep(0.5)
+  sleep(0.3)
   led1.off()
   led2.on()
-  sleep(0.5)
+  sleep(0.3)
   led2.off()
   x = x + 1
 
