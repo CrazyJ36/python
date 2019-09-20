@@ -33,3 +33,29 @@ print("actual tuple3:", tuple3, '\n')
 print("Slicing tuple3 example: print(tuple3[2:5])")
 print("Meaning get and print items from index 2 till before 5")
 print("Here:", tuple3[2:5], '\n')
+
+print("Concat two tuples into one example: (1,2,3) + (4,5,6)")
+print( "Here:", (1,2,3) + (4,5,6) )
+
+print(
+"""
+You can also use the following function/operation methods on tuples:
+len( ('this', 'is', 'tuple') ) - count object of tuple list
+(1,2,3) + (4,5,6) - concatenation of tuples to one
+('hi',) * 4 - makes tuple with four 'hi's as items
+3 in (1,2,3) - Returns true, tests for A  '3' integers' existence in items
+for x in (1,2,3): print x, - iterate the tuple
+TODO add all of these to examples.
+"""
+)
+
+print(
+"""Just like any variable Object, you can delete
+A tuple, syntax:
+del tuple1, tuple2, tuple3
+I'll do this now to free some RAM memory before we exit,
+Bye!"""
+)
+
+del tuple1, tuple2, tuple3
+exit(0)
