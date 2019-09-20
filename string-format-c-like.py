@@ -2,9 +2,7 @@
 
 # Format string using variables like in C.
 # %s - String
-
 # %d - Integers
-
 # %f - floating point(real) numbers
 
 # %.<num of digits>f - floating point number with

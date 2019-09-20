@@ -7,16 +7,27 @@
 from time import sleep
 from gpiozero import ButtonBoard
 
-btns = ButtonBoard(23, 27)
+btns = ButtonBoard(23, 27, 22, 25, 9, 5, 8)
 
-print("Press button 1 or 2...")
+print("Press any button...")
 
 while True:
   try:
     if btns[0].is_pressed:
-      print("button one pressed")
+      print("button 0 pressed")
     if btns[1].is_pressed:
-      print("button two pressed")
+      print("button 1 pressed")
+    if btns[2].is_pressed:
+      print("button 2 pressed")
+    if btns[3].is_pressed:
+      print("button 3 pressed")
+    if btns[4].is_pressed:
+      print("button 4 pressed")
+    if btns[5].is_pressed:
+      print("button 5 pressed")
+    if btns[6].is_pressed:
+      print("button 6 pressed")
+
     sleep(0.2)
 
   except KeyboardInterrupt:

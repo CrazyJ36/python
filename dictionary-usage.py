@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 # Dictionaries are data structures(blueprint for big data, definition template)
 # used to map key:value pairs.
 # As if lists were dictionaries with integer keys at range.

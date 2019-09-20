@@ -8,21 +8,26 @@ from time import sleep
 GPIO.setmode(GPIO.BCM)
 
 print("Testing LEDs..")
-# LED PINS
-l = [4, 18, 22, 23]
+
+# set LED PINS
+leds = [24, 7, 6]
+
 # Setup all
-for n in l:
-  GPIO.setup(n, GPIO.OUT)
+for all in leds:
+  GPIO.setup(all, GPIO.OUT)
 
 # Turn on all
-for n in l:
-  GPIO.output(n, GPIO.HIGH)
+for all in leds:
+  GPIO.output(all, GPIO.HIGH)
 
+# sleeping the thread leaves all leds on for one second
 sleep(1)
-# Turn off all
-for n in l:
-  GPIO.output(n, GPIO.LOW)
 
+# Turn off all
+for all in leds:
+  GPIO.output(all, GPIO.LOW)
+
+# cleanup and exit
 print("Exiting..")
 GPIO.cleanup()
 exit()
