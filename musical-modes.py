@@ -36,10 +36,15 @@ while loop:
     seq=deque('CDEFGAB')
 
     try:
-        choice = int(input())
+      choice = int(input())
     except ValueError:
         print(H)
+    except KeyboardInterrupt:
+      print("\rExit")
+      exit()
     if type(choice) is not int:
+        print(H)
+    elif choice==0:
         print(H)
 
     elif choice==1:
@@ -62,9 +67,8 @@ while loop:
     elif choice==7:
         seq.rotate(-6)
         print(list(seq), Lo)
-
     elif choice==8:
         print(E)
         loop=False
     elif choice==9:
-        show_menu()
+        print_menu()
