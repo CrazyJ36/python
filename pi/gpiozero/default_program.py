@@ -4,23 +4,40 @@
 # This is set to run on boot at:
 # /etc/rc.local
 
-from gpiozero import LED, Button
+import mylib
 from time import sleep
-from subprocess import call
+from subprocess import run
 
-led = LED(6)
-btn1 = Button(23)
-btn2 = Button(27)
-btn3 = Button(22)
-btn4 = Button(25)
-btn5 = Button(
+def exitFunc():
+  exit(0)
+
 def flash():
-  led.on()
-  sleep(0.1)
-  led.off()
-  sleep(0.1)
+  x = 0
+  while x < 5:
+    mylib.led1.on()
+    sleep(0.1)
+    mylib.led1.off()
+    sleep(0.1)
+    x = x + 1
+  return
 
+def rebootFunc():
+  run( ['sudo', 'reboot', 'now'] )
+  return
 
+#def testPrint():
+#  run( ["printf" , "btn 2, printing\n"] )
+
+# main loop
 while True:
-  if btn.is_pressed:
-    print
+  if mylib.btn1.is_pressed:
+    flash()
+  #if mylib.btn2.is_pressed:
+  #  testPrint()
+  #if mylib.btn3.is_pressed:
+  #if mylib.btn4.is_pressed:
+  if mylib.btn6.is_pressed:
+    exitFunc()
+  if mylib.btn7.is_pressed:
+    rebootFunc()
+  sleep(0.2)

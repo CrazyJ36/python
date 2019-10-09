@@ -1,4 +1,10 @@
-from gpiozero import Button
+from gpiozero import Button, LED
+
+led1 = LED(24)
+led2 = LED(7)
+led3 = LED(6)
+
+switch = Button(4)
 
 btn1 = Button(23)
 btn2 = Button(27)
