@@ -9,11 +9,8 @@ from time import sleep
 from subprocess import call
 
 led = LED(6)
-btn1 = Button(23)
-btn2 = Button(27)
-btn3 = Button(22)
-btn4 = Button(25)
-btn5 = Button(
+btn = Button(8)
+
 def flash():
   led.on()
   sleep(0.1)
@@ -23,4 +20,8 @@ def flash():
 
 while True:
   if btn.is_pressed:
-    print
+    flash()
+    flash()
+    flash()
+    call(['sudo', 'poweroff'])
+    exit()
