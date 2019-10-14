@@ -5,13 +5,10 @@ print("Loading gpiozero")
 from gpiozero import LEDBoard, ButtonBoard
 from signal import pause
 
-# Image representaion
-# leds:  24     7      6
-# btns:  27    10    5
-leds = LEDBoard(24, 7, 6)
-btns = ButtonBoard(27, 9, 5)
+leds = LEDBoard(18,24,11,12,7,16)
+btns = ButtonBoard(23,27,22,25,9,5)
 
-print("Press the soft button that is closest to any of the 3 LEDs, LED will light...")
+print("Press the soft button that is closest to any of the middle row LEDs, LED will light...")
 print("Ctrl-C to exit\n")
 
 while True :

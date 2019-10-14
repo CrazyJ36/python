@@ -6,10 +6,10 @@ print("Loading.. Press Ctrl-c to exit A test.\n")
 import sys
 from time import sleep
 from signal import pause
-from gpiozero import Button, ButtonBoard, LEDBoard
+from gpiozero import Button, ButtonBoard, LEDBoard, Buzzer
 
 
-usage = "Command error..\nUsage: ./perma-proto-org... [leds, buttons, switch, all]"
+usage = "Command error..\nUsage: ./perma-proto-org... [leds, buttons, buzzer, all]"
 try:
   cmd = sys.argv[1]
 except IndexError:
@@ -18,9 +18,9 @@ except IndexError:
 
 
 try:
-  leds = LEDBoard(24, 7, 6)
-  btns = ButtonBoard(23, 27, 22, 25, 9, 5, 8, )
-  switch = Button(4)
+  leds = LEDBoard(4, 18, 24, 11, 12, 7, 16, 6)
+  btns = ButtonBoard(23, 27, 22, 25, 9, 5, 8)
+  buzz = Buzzer(2)
 except Exception:
   print("gpiozero or pin didn't load correctly, Exiting..")
   exit(0)
@@ -47,7 +47,7 @@ def test_leds():
 
 
 def test_btns():
-  print("\nTesting Buttons")
+  print("\nTesting Buttons...")
   print("Total desired button devices: ", end='')
   print(len(btns))
   print("Press any push button on the board, you'll see it active in A list of all.")
@@ -60,7 +60,13 @@ def test_btns():
       print("Exiting\n\n")
       return
 
+def test_buzz():
+  print("Testing Buzzer.. Beep(repeated on/off) for A short time...")
+  buzz.beep(0.005, 0.005, 50, False)
+  return
 
+# Switch Method Reference
+'''
 def test_switch():
   print("Toggle the switch(the one on the right of the two)")
   try:
@@ -75,18 +81,18 @@ def test_switch():
   except KeyboardInterrupt:
     print("\nExiting..\n")
     return
-
+'''
 
 if cmd == "leds":
   test_leds()
 elif cmd == "buttons":
   test_btns()
-elif cmd == "switch":
-  test_switch()
+elif cmd == "buzzer":
+  test_buzz()
 elif cmd == "all":
   test_leds()
   test_btns()
-  test_switch()
+  test_buzz()
 else:
   print(usage)
   exit(0)
