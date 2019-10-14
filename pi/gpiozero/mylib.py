@@ -1,10 +1,15 @@
-from gpiozero import Button, LED
+from gpiozero import Button, LED, Buzzer
 
-led1 = LED(24)
-led2 = LED(7)
-led3 = LED(6)
+led1 = LED(4)
+led2 = LED(18)
+led3 = LED(24)
+led4 = LED(11)
+led5 = LED(12)
+led6 = LED(7)
+led7 = LED(16)
+led8 = LED(6)
 
-switch = Button(4)
+buzzer = Buzzer(2)
 
 btn1 = Button(23)
 btn2 = Button(27)

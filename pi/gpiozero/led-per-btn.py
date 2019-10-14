@@ -16,7 +16,7 @@ while True :
     leds.source = btns.values
     pause()
   except KeyboardInterrupt:
-    print("Exiting..")
+    print("\rExiting..")
     exit(0)
 
 
