@@ -19,7 +19,9 @@ while True :
     sleep(0.5)
     number = number + 1
   except KeyboardInterrupt:
-    print("Ctrl-C pressed, the program will now exit...")
+    # Notice the '\r' (return) escape character at the beginning of this print string.
+    # This removes the '^' carat character from your terminal output upon key press and exit.
+    print("\rCtrl-C pressed, the program will now exit...")
     exit(0)
 
 
