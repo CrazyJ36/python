@@ -37,7 +37,7 @@ def test_leds():
       i1 = 0
       while i1 < len(leds):
         leds[i1].on()
-        sleep(0.3)
+        sleep(0.1)
         leds[i1].off()
         i1 = i1 + 1
       i0 = i0 + 1
