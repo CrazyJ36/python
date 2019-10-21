@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 
-# using:
-# with open(file) as file_ojb
-# enables 'context manager' capabilities, getting handle.
+# using 'with open(file) as file_ojb'
+# enables 'context manager' capabilities and getting handle.
 
 
 try:
@@ -15,6 +14,6 @@ except FileNotFoundError:
 file = open("/home/thomas/junk/tst.txt")
 text = file.read()
 file.close()
-print("Whole file (print(text))")
+print("Whole file:")
 print(text, end='')
 
