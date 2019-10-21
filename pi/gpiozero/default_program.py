@@ -22,6 +22,11 @@ def flash():
   return
 
 def rebootFunc():
+  flash()
+  sleep(0.5)
+  flash()
+  sleep(0.5)
+  flash()
   run( ['sudo', 'reboot', 'now'] )
   return
 

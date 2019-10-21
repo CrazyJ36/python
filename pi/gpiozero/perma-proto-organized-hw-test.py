@@ -2,14 +2,14 @@
 
 # This test my "organized" hardware setup on perma-proto
 
-print("Loading.. Press Ctrl-c to exit A test.\n")
+print("Loading.. Press Ctrl-c to exit A test.")
 import sys
 from time import sleep
 from signal import pause
 from gpiozero import Button, ButtonBoard, LEDBoard, Buzzer
 
+usage = "Usage: ./perma-proto-org... [leds, buttons, buzzer, all]"
 
-usage = "Command error..\nUsage: ./perma-proto-org... [leds, buttons, buzzer, all]"
 try:
   cmd = sys.argv[1]
 except IndexError:
@@ -28,7 +28,7 @@ except Exception:
 
 def test_leds():
   try:
-    print("\nTotal desired LEDs: ", end='' )
+    print("Total desired LEDs: ", end='' )
     print(len(leds))
     print("Flashing All LEDs in order 3 times, watch PI..")
     sleep(1)
@@ -42,12 +42,12 @@ def test_leds():
         i1 = i1 + 1
       i0 = i0 + 1
   except KeyboardInterrupt:
-    print("Exiting..\n")
+    print("\rExiting..\n")
     return
 
 
 def test_btns():
-  print("\nTesting Buttons...")
+  print("Testing Buttons...")
   print("Total desired button devices: ", end='')
   print(len(btns))
   print("Press any push button on the board, you'll see it active in A list of all.")
@@ -57,7 +57,7 @@ def test_btns():
         print(btns.value)
         sleep(0.2)
     except KeyboardInterrupt:
-      print("Exiting\n\n")
+      print("\rExiting\n")
       return
 
 def test_buzz():
