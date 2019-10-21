@@ -14,18 +14,16 @@ def exitFunc():
 def flash():
   x = 0
   while x < 5:
-    mylib.led1.on()
+    mylib.led2.on()
     sleep(0.1)
-    mylib.led1.off()
+    mylib.led2.off()
     sleep(0.1)
     x = x + 1
   return
 
 def rebootFunc():
   flash()
-  sleep(0.5)
   flash()
-  sleep(0.5)
   flash()
   run( ['sudo', 'reboot', 'now'] )
   return
