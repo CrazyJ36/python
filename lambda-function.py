@@ -13,7 +13,37 @@
 # Functions created with lambda expressions cannot contain statements or annotations.
 # The word lambda comes from A model of computational calculus.
 
+# lambda function to calculate x minus 2:
+# lambda x: x - 2
 
-lambda x: x < 2
+# in python lambdas, your lambda and argument must be in their own perenthesis.
+# The following states that function 'x' will take arg 'y' and subtract two, then return.
+# or: 'for x, x - 2, with 8 as x'
+# (lambda x: x - 2)(8)
+print( (lambda x: x - 2)(8) )
 
-print(x(4))
+# You can't call x from 'lambda x' portion. Though you can assign the expression as varibable.
+# this expression can then be called like A function.
+# This is equivilent of:
+#
+# def sub_two(x):
+#   return x - 2
+#
+sub_two = lambda x: x - 2
+print( sub_two(10) )
+
+# multiple arg lambda. function printing two words. lambdas can use functions( like print() ) in the expression.
+# simple: lambda function with two args, pring the args:
+words = lambda first, last: print( first + last )
+
+words('thomas', 'kennedy')
+
+# create function in funtion using lambda.
+def multi_func(x):
+  # x from multi_func() will be used as y in lambda expression.
+  return (lambda y: y + 5)(x)
+
+print(multi_func(3))
+
+
+

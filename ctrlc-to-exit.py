@@ -3,6 +3,7 @@
 # This program demonstrates how to cleanly exit A program
 # with the press of Ctrl-C, useing try/except KeyboardInterrupt.
 
+from sys import exit as end_prog  # for sys.exit(), the normal way to exit A python program/module or the interpreter.
 from time import sleep
 
 number = 0
@@ -22,6 +23,6 @@ while True :
     # Notice the '\r' (return) escape character at the beginning of this print string.
     # This removes the '^' carat character from your terminal output upon key press and exit.
     print("\rCtrl-C pressed, the program will now exit...")
-    exit(0)
+    end_prog(0)  # end_prog as sys.exit()
 
 
