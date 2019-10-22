@@ -12,9 +12,9 @@
 # in any way, or assign it to anything else.) can be used in dictionaries. B
 
 # index as:  1         2              3
-data = {"age":25, "car":"red", "char1":'c'} 
+data = {"age":25, "car":"red", "char1":'c'}
 
-print(data["age"]) # prints the value of key 'age' in 'data' 
+print(data["age"]) # prints the value of key 'age' in 'data'
 print(data["car"])
 print(data["char1"])
 
