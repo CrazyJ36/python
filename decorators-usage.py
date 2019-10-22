@@ -2,6 +2,7 @@
 
 # decorators allow to reuse A function in A new way to extend it's function.
 
+# or @decor to call this below
 def decor(func):
   def wrap():
     print("-----")
