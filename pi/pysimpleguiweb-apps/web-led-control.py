@@ -18,11 +18,10 @@ layout = [
 win = Gui.Window('Pi Remote', layout, web_port=8086, web_start_browser=False,)
 # If you get runtime error about max(), you forgot Window(layout).
 
-print('Ready. Press stop in web app or press CTRL-C')
+print('Ready.')
 while True:
-  event, values = win.Read()
+    event, values = win.Read()
 
-  try:
     if event == 'On':
       led.on()
       print('LED On signal')
@@ -33,12 +32,8 @@ while True:
       print('Stop Button pushed. Exiting...')
       break
     elif event is None:  # browser page closed
-      print('User closed browser page. I can probably stop this example. Exiting..')
+      print('User closed browser page. I can probably stop this example... Exiting..')
       break
-
-  except (KeyboardInterrupt, SystemExit):  # Multiple exceptions must be in perenthesis as to catch one thing
-    win.CloseNonBlocking()
-    break
 
 win.Close()
 print('done')
