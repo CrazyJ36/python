@@ -15,7 +15,7 @@ layout = [
 # Here, set web_port=int, to force pi to use one port everytime. HELPS.
 # and set web_start_browser=False so that local system browser doesn't
 # steal connection, then you can connect to pi from mobile phone everytime.
-win = Gui.Window('Pi Remote', layout, web_port=8086, web_start_browser=False)
+win = Gui.Window('Pi Remote', layout, web_port=8086, web_start_browser=False,)
 # If you get runtime error about max(), you forgot Window(layout).
 
 print('Ready. Press stop in web app or press CTRL-C')
@@ -37,6 +37,7 @@ while True:
       break
 
   except (KeyboardInterrupt, SystemExit):  # Multiple exceptions must be in perenthesis as to catch one thing
+    win.CloseNonBlocking()
     break
 
 win.Close()
