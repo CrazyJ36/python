@@ -11,7 +11,7 @@ def myDocPrintFunc():
    and can be read by developers.
    Though you can use:\n
    print(mfunc.__doc__)
-   Anytime in the code
+   Anytime in the code, or interpreter
    to print this as A help function.\n
    To show an interactive help
    (like manpage) use:

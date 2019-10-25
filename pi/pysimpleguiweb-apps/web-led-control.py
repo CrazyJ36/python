@@ -1,3 +1,4 @@
+# TODO: check to see if led is on, if is, don't execute on().
 print('Loading... Open pi address in browser with port \':8086\'')
 import PySimpleGUIWeb as Gui
 from gpiozero import LED
