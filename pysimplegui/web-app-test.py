@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import PySimpleGUIWeb as Gui
 
 layout = [
