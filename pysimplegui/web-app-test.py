@@ -1,4 +1,5 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
+
 import PySimpleGUIWeb as Gui
 
 layout = [
@@ -10,5 +11,9 @@ win = Gui.Window('Title', layout)
 
 while True:
   event, values = win.Read()
-  if event == 'button':
+  if event is None:
+    break
+  elif event == 'button':
     print("user pressed button on web app")
+win.Close()
+exit(0)
