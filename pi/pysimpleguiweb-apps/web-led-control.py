@@ -9,7 +9,7 @@ layout = [
 ]
 
 # If you get runtime error about max(), you forgot Window(layout).
-win = Gui.Window('Pi Remote', layout)
+win = Gui.Window('Pi Remote', layout, web_port=8086)
 
 while True:
   event, values = win.Read()
@@ -18,7 +18,7 @@ while True:
     led.on()
   elif event == 'Off':
     led.off()
-  elif event is None:
+  elif event is None:  # browser page closed
     break
 
 win.Close()
