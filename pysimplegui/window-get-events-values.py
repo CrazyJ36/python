@@ -8,7 +8,7 @@ layout = [
 
   # Use Window(return_keyboard_events=True) normally for Input().
   # Input(key='input_id') to return input_id reference in values(key:value) on event.
-  # Returns char entered as values in values dict
+  # Returns char entered as event, and as value in values{dict} dict object
   [Gui.Input(key='input_id')]
 ]
 

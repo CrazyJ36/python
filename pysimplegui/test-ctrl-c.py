@@ -1,22 +1,22 @@
-import PySimpleGUIWeb as Gui
+import PySimpleGUI as Gui
+layout = [[Gui.Text('Try pressing ctrl-c', key='text')]]
 
-layout = [
-  [Gui.Input()],
-  [Gui.Text('Type above, \'q\' to quit.', key='txt')]
-]
-
-win = Gui.Window("Title", layout,
- web_start_browser=0,  # False is 0
- use_default_focus=False,
- return_keyboard_events=True,  # 1 is True
- web_port=8086)
+# in Window definition, return_keyboard_events to get ctrl-c while window is in focus.
+win = Gui.Window("Test CTRL-C", layout, return_keyboard_events=True, use_default_focus=False)
 
 while True:
-    values = win.Read()
-    if values.key == 'q':
-      break
-    else:
-      win.FindElement('txt').Update(values)
+    try:
+        event, values = win.read()
+        if event == 'Control_L:17' and 'c':
+            print("Ctrl-C pressed on GUI Window.")
+            break
+        elif event is None:
+            break
+    except KeyboardInterrupt:
+        print("Ctrl-C pressed in terminal.")
+        win.Element('text').set_focus(True)
+        win.Close()
+        exit(0)
 
 win.Close()
 exit(0)
