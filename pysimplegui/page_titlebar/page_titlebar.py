@@ -4,8 +4,7 @@ import PySimpleGUIWeb as sg
 
 layout = [
   [sg.Text('''
-    Text.
-    More Text(same function param).
+    Get this text below header bar.
     ''')
   ]
 ]
@@ -13,7 +12,7 @@ layout = [
 window = sg.Window(
   'Page Title',
   layout,
-  web_start_browser=False,
+  web_start_browser=True,
   web_port=8086,
 )
 
@@ -21,9 +20,8 @@ print("Ready")
 
 while True:
   try:
-    events = window.Read()
-
-    if events is None:
+    event, values = window.Read()
+    if event is None:
       break
   except KeyboardInterrupt:
     break
