@@ -19,6 +19,6 @@ while True:
     elif event is None:
         print('close button exit')
         break
-    
+
 window.Close()
 exit(0)
