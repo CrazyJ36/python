@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
-import PySimpleGUI
-PySimpleGUI.Popup('Hello World, The button exits..')  # Default popup finishes the window action after 'ok' clicked.
+import PySimpleGUI as sg
+
+# Default popup finishes the Window action after 'ok' clicked.
+sg.Popup('Hello World, The button exits..')
+
 exit(0)
