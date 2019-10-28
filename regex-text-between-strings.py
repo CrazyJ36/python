@@ -14,6 +14,7 @@ orig_text = "This is A sentence of text."
 # returned object data, the actual text match
 # (re.search().group1).
 # print that.
+# TODO: group(1) probably is first occurence. ???
 
 # Basiclly:
 # 'is(.*)of'
