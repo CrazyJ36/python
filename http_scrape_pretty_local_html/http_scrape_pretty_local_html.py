@@ -51,9 +51,9 @@ with urllib.request.urlopen(in_url) as response:
 # lstrip() strips whitespace on the left (as opposed to rstring() - right)
 # This will make the terminal print text pretty regardless
 #  of where spaces are on new lines.
-print('First paragraph in url:\n\n', string.strip().lstrip())
+print('First paragraph in url:\n\n', string.strip(' ').lstrip())
 print('\nwriting output: ' + work_dir_minus_filestr)
-out_file = open(work_dir_minus_filestr + 'new.txt', 'w', encoding='utf-8')
+out_file = open(work_dir_minus_filestr + 'news.txt', 'w', encoding='utf-8')
 out_file.write(string)
 out_file.close()
 exit(0)
