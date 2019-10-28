@@ -8,7 +8,7 @@ user = str(os.getlogin())
 
 if os.name == 'nt':
     # '\' works as formatter to extend to multiple lines.
-    work_dir = 'C:\\Users\\' + user + \
+    work_dir = 'file:\\\C:\\Users\\' + user + \
         '\\development\\python\\http_scrape_pretty_local_html\\'
     in_url = work_dir + 'index.html'
 
@@ -38,9 +38,11 @@ with urllib.request.urlopen(in_url) as response:
 
     if os.name == 'nt':
         html_body_text = html_body.split('\\r' + '\\n')  # is list
+        work_dir_minus_filestr = work_dir.replace('file:\\\\', '')
+
     elif os.name == 'posix':
         html_body_text = html_body.split('\\n')  # doesn't work the same.
-
+        work_dir_minus_filestr = work_dir.replace('file://', '')
     # putting list items in string.
     string = ''
     for x in html_body_text:
@@ -49,9 +51,9 @@ with urllib.request.urlopen(in_url) as response:
 # lstrip() strips whitespace on the left (as opposed to rstring() - right)
 # This will make the terminal print text pretty regardless
 #  of where spaces are on new lines.
-#print(string.strip().rstrip().lstrip())
-
-out_file = open(work_dir + 'new.txt', 'x')
+print('First paragraph in url:\n\n', string.strip().lstrip())
+print('\nwriting output: ' + work_dir_minus_filestr)
+out_file = open(work_dir_minus_filestr + 'new.txt', 'w', encoding='utf-8')
 out_file.write(string)
 out_file.close()
 exit(0)
