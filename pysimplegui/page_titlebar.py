@@ -3,7 +3,7 @@
 import PySimpleGUIWeb as sg
 
 layout = [
-  [sg.Text('''
+      [sg.Text('''
     Get this text below header bar.
     ''')
   ]
@@ -14,6 +14,9 @@ window = sg.Window(
   layout,
   web_start_browser=True,
   web_port=8086,
+  border_depth='1',
+  no_titlebar=True,
+  
 )
 
 print("Ready")
