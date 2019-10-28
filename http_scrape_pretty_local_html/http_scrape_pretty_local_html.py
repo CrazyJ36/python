@@ -8,12 +8,12 @@ user = str(os.getlogin())
 
 if os.name == 'nt':
     # '\' works as formatter to extend to multiple lines.
-    work_dir = 'file:///C:\\Users\\' + user + \
+    work_dir = 'C:\\Users\\' + user + \
         '\\development\\python\\http_scrape_pretty_local_html\\'
     in_url = work_dir + 'index.html'
 
 elif os.name == 'posix':
-    work_dir = 'file:///home/' + user + \
+    work_dir = '/home/' + user + \
         '/development/python/http_scrape_pretty_local_html/'
     in_url = work_dir + 'index.html'
 else:
