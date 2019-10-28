@@ -13,7 +13,7 @@ if os.name == 'nt':
     in_url = work_dir + 'index.html'
 
 elif os.name == 'posix':
-    work_dir = '/home/' + user + \
+    work_dir = 'file:///home/' + user + \
         '/development/python/http_scrape_pretty_local_html/'
     in_url = work_dir + 'index.html'
 else:
