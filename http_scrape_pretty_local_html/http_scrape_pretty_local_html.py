@@ -33,7 +33,10 @@ with urllib.request.urlopen(file_url) as response:
     #  Above .replace works for the string statement before.
     # Replaced the 'apostraphe' escape code with the actual char.
 
-    html_body_text = html_body.split('\\n' + '\\r')  # is list
+    if os.name == 'nt':
+        html_body_text = html_body.split('\\n' + '\\r')  # is list
+    elif os.name == 'posix':
+        html_body_text = html_body.split('\\n')  # doesn't work the same.
 
     # putting list items in string.
     string = ''
