@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 import urllib.request
 import os
 import re
@@ -34,7 +35,7 @@ with urllib.request.urlopen(file_url) as response:
     # Replaced the 'apostraphe' escape code with the actual char.
 
     if os.name == 'nt':
-        html_body_text = html_body.split('\\n' + '\\r')  # is list
+        html_body_text = html_body.split('\\r' + '\\n')  # is list
     elif os.name == 'posix':
         html_body_text = html_body.split('\\n')  # doesn't work the same.
 
@@ -46,5 +47,5 @@ with urllib.request.urlopen(file_url) as response:
 # lstrip() strips whitespace on the left (as opposed to rstring() - right)
 # This will make the terminal print text pretty regardless
 #  of where spaces are on new lines.
-print(string.lstrip().rstrip())
+print(string.lstrip())
 exit(0)
