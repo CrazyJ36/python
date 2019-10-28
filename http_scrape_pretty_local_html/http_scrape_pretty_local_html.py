@@ -51,7 +51,7 @@ with urllib.request.urlopen(in_url) as response:
 #  of where spaces are on new lines.
 #print(string.strip().rstrip().lstrip())
 
-out_file = open(work_dir + 'new.txt', 'w')
+out_file = open(work_dir + 'new.txt', 'x')
 out_file.write(string)
 out_file.close()
 exit(0)
