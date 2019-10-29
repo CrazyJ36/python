@@ -7,7 +7,7 @@
 # or functions from another program.
 # import sys
 # sys.path.append('crazyj36_libs')
-import get_dir
+from crazyj36_libs import get_dir
 # -----
 # Or use blank file called __ init __.py in the
 # directory which holds your modules, this
