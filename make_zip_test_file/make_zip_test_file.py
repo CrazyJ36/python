@@ -1,20 +1,15 @@
 #!/usr/bin/env python3
 
 # Include upper 'python' directory in systems
-# search path for modules, then import A variable from
-# another program.
+# search path for modules, then import my variables
+# or functions from another program.
 import sys
-sys.path.append('../')
+sys.path.append('../crazyj36_libs/get_dir')
 import get_dir
 
 
 import zipfile
 
-file1_name = current_cmd_path + '\file1.txt'
-
-file2_name = current_cmd_path + '\file2.txt'
-
-print(file1_name)
 print('initiating 2 test files.')
 '''
 file1 = open(current_cmd_path + 'file1.txt', 'x')
