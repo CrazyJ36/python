@@ -13,11 +13,16 @@
 # tells python it can import from here.
 # This is the method used here.
 # Then you can import modules from the folder
-# which contains __init__.py
+# which contains __init__.py as:
 from crazyj36_libs import get_dir
+# Though 'import crazyj36_libs' won't work.
+# Be aware that your IDE may report 'unresolved
+# import' on the libs as __init__.py only checks
+# for this file when running, not your IDE.
 
 print(get_dir.get_os_dir_append_name('no-file.txt'))
 
+get_dir.get_os_dir_append_name(
 # Calling:
 # function_name.__doc__
 # returns the docstring or
