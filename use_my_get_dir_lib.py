@@ -5,8 +5,8 @@
 # temporarily append directories to the systems
 # search path for modules, then import my variables
 # or functions from another program.
-import sys
-sys.path.append('crazyj36_libs')
+# import sys
+# sys.path.append('crazyj36_libs')
 import get_dir
 # -----
 # Or use blank file called __ init __.py in the
