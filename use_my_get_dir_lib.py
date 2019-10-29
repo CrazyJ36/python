@@ -7,12 +7,14 @@
 # or functions from another program.
 # import sys
 # sys.path.append('crazyj36_libs')
-from crazyj36_libs import get_dir
-# -----
+
 # Or use blank file called __ init __.py in the
 # directory which holds your modules, this
 # tells python it can import from here.
-# Second option may only work on Windows.
+# This is the method used here.
+# Then you can import modules from the folder
+# which contains __init__.py
+from crazyj36_libs import get_dir
 
 print(get_dir.get_os_dir_append_name('no-file.txt'))
 
