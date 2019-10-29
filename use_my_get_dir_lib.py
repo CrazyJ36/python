@@ -1,4 +1,4 @@
-#!/usr/bin/env py
+#!/usr/bin/env python3
 
 # In case your lib file is in A different directory
 # then your new file that is using your library,
@@ -19,7 +19,7 @@ import get_dir
 
 print(get_dir.get_os_dir_append_name('no'))
 test = get_dir.get_os_dir_append_name('useless-file-name.txt')
-print('the function output(current dir and new file name):', test)
+print('the function output:', test)
 
 # Calling:
 # function_name.__doc__
