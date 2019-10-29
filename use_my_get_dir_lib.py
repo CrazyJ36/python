@@ -5,21 +5,16 @@
 # temporarily append directories to the systems
 # search path for modules, then import my variables
 # or functions from another program.
-# -----
-# import sys
-# sys.path.append('../crazyj36_libs/get_dir')
-# import get_dir
+import sys
+sys.path.append('crazyj36_libs')
+import get_dir
 # -----
 # Or use blank file called __ init __.py in the
 # directory which holds your modules, this
 # tells python it can import from here.
+# Second option may only work on Windows.
 
-# In this files case I've done the second option.
-import get_dir
-
-print(get_dir.get_os_dir_append_name('no'))
-test = get_dir.get_os_dir_append_name('useless-file-name.txt')
-print('the function output:', test)
+print(get_dir.get_os_dir_append_name('no-file.txt'))
 
 # Calling:
 # function_name.__doc__
