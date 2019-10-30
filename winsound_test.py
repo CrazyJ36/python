@@ -7,5 +7,5 @@ using A beep noise.
 
 1000 HZ for 1000 Ms.
 ''')
-winsound.Beep(1000, 1000)
 
+winsound.Beep(1000, 1000)
