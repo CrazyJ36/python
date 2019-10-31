@@ -12,10 +12,10 @@ except IndexError:
 '''
 # another way to check for empty args(if len(sys.argv))
 if len(sys.argv) > 1:
-  my_arg = sys.argv[1]  # or print(sys.argv[1])
+    my_arg = sys.argv[1]  # or print(sys.argv[1])
 else:
-  print("No arguments")
-  sys.exit()
+    print("No arguments")
+    sys.exit()
 
 # print first command line argument
 print("The first arg was:", my_arg)

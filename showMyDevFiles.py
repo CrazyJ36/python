@@ -9,4 +9,3 @@ print("Changing to development work directory", path)
 os.chdir(path)
 print("Showing current directory (within script):")
 os.system('ls')
-

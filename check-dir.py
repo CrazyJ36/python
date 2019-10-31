@@ -1,4 +1,5 @@
 import os
+
 if os.scandir("C:\\Users"):
     print("windows users exists")
 else:

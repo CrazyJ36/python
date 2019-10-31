@@ -7,11 +7,10 @@ word = 'five'
 print("word is 'five'\n")
 
 if 'i' in word:
-  print("there's an 'I' in word")
+    print("there's an 'I' in word")
 
-if not 'x' in word:
-  print("there is no 'x' in word")
+if 'x' not in word:
+    print("there is no 'x' in word")
 
 print("\n'f' in word?:")
-print( 'f' in word )
-
+print('f' in word)
