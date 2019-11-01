@@ -1,3 +1,0 @@
-title=button
-author=crazyj36
-orientation=portrait

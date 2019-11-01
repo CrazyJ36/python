@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+# This could initialize A current path string with 
+# new files names easily.
+
 # In case your lib file is in A different directory
 # then your new file that is using your library,
 # temporarily append directories to the systems
@@ -22,7 +25,6 @@ from crazyj36_libs import get_dir
 
 print(get_dir.get_os_dir_append_name('no-file.txt'))
 
-get_dir.get_os_dir_append_name(
 # Calling:
 # function_name.__doc__
 # returns the docstring or
