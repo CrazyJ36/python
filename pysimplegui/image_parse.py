@@ -1,7 +1,7 @@
 from PySimpleGUI import Window, Image
 from os import curdir
 
-icon_str = str(curdir + '/explorer_icon64.png')
+icon_str = str(curdir + '/windows_icon.png')
 
 layout = [
     [Image(icon_str)],
