@@ -18,7 +18,7 @@ layout = [
 # steal connection(or set web_multiple_instance=True),
 # then you can connect to pi from mobile phone.
 win = Gui.Window('Pi Remote', layout, web_port=8086,
-                 web_start_browser=False, web_ip='0.0.0.0')
+                 web_start_browser=False,)
 # If you get runtime error about max(), you forgot Window(layout).
 
 print('Ready.')
