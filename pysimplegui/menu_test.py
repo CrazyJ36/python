@@ -21,6 +21,7 @@ while True:
     elif event == 'log':
         print('logged')
     elif event == 'exit':
+        print('menu1 exit button clicked')
         break
     elif event == 'about':
         Gui.Popup('Developer:\nCrazyJ36', button_type=0)

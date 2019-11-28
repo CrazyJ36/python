@@ -30,15 +30,12 @@ def on_quit_callback(systray):
 menu_options = (
     ("menu option 1", "windows_icon.ico", menu_action1),
     ("menu option 2", None, menu_action2),
-
     ("sub-menu", None, (
         ('1', None, sub_action1),
         ('2', None, sub_action2),
         )
      ),
-
-    ("about", None, info_default_option)
-
+    ("about", None, info_default_option),
 )
 
 systray = SysTrayIcon(
