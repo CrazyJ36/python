@@ -2,26 +2,26 @@ from infi.systray import SysTrayIcon
 import PySimpleGUI as psg
 
 
-def tray_menu1(systray):
-    print('menu 1 clicked')
+def tray_menu(systray):
+    print('clicked')
 
 
 menu_options = (
-    ("menu 1", None, tray_menu1),
+    ("menu", None, tray_menu),
 )
 systray = SysTrayIcon(
     None,
     "pysimplegui and infi.systray",
     menu_options,
 )
-systray.start()
 
 psg_layout = [
-    [psg.Text("Text")],
+    [psg.Text("Close this window, system tray icon will close.")],
 ]
-psg_window = psg.Window("psg and info.systray", psg_layout,
-                        size=[300, 100],)
+psg_window = psg.Window("psg and systray", psg_layout,
+                        size=[500, 100],)
 
+systray.start()
 while True:
     event, values = psg_window.read()
 
