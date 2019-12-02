@@ -8,7 +8,6 @@ import PySimpleGUIWeb as Gui
 
 from gpiozero import LED
 import PySimpleGUIWeb as Gui
-print('Loading... Open pi address in browser with port \':8086\'')
 
 led = LED(18)
 
