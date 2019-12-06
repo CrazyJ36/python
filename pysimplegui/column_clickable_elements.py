@@ -11,13 +11,15 @@ while i < 9:
         items_list.append([sg.Text(num_text, click_submits=True)])
         i = i + 1
 
+# now that items are made with text, delete unused variable
+del num_text
+
 layout = [
     [sg.Column(layout=items_list, size=(300, 100), scrollable=True)],
     [sg.Text('click an item above, the chosen will show here', size=[20, 100], key='result')]
 ]
 
 window = sg.Window('column test', layout, size=[400, 200])
-x = 0
 
 while True:
     event, values = window.Read()
