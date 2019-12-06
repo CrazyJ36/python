@@ -4,8 +4,10 @@ from gpiozero import Button, LED
 from signal import pause
 
 print("button 1 is 'trigger' switch to led 1")
+print("led will light as long as button is pressed.")
+
 btn = Button(23)
-led = LED(24)
+led = LED(4)
 
 led.source = btn
 
