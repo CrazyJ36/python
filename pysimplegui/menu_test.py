@@ -24,6 +24,7 @@ while True:
         print('menu1 exit button clicked')
         break
     elif event == 'about':
+        print('showing about dialog')
         Gui.Popup('Developer:\nCrazyJ36', button_type=0)
 
 window.Close()

@@ -7,9 +7,8 @@ def count_char(text, char):
       count += 1
   return count
 
-filename = "tst.txt"
-with open(filename) as f:
+with open("tst.txt") as f:
   text = f.read()
-print("There are ", end='')
-print(count_char(text, "a"), end='')  # uses the text count function from count_char, "a" is chosen character to look for.
-print(" 'a's in tst.txt")
+
+result = count_char(text, 'a')
+print(result)

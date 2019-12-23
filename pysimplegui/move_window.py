@@ -1,11 +1,10 @@
 import PySimpleGUI as psg
 
 layout = [
-    [psg.Txt("text1")],
     [psg.Button("Move")],
 ]
 
-window = psg.Window('window', layout, size=[100, 75])
+window = psg.Window('window', layout, size=[75, 75])
 
 while True:
     event, values = window.Read()

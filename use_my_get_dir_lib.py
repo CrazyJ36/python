@@ -23,7 +23,7 @@ from crazyj36_libs import get_dir
 # import' on the libs as __init__.py only checks
 # for this file when running, not your IDE.
 
-print(get_dir.get_os_dir_append_name('no-file.txt'))
+print(get_dir.get_os_dir_append_name(''))
 
 # Calling:
 # function_name.__doc__

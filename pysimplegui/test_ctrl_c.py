@@ -15,8 +15,8 @@ while True:
             break
         elif event is None:
             break
-    except KeyboardInterrupt:  # must activate(click) window after ctrl-c in terminal :<(
-        print('Ctrl-C pressed in terminal.')
+    except KeyboardInterrupt:  # must re-click window in terminal
+        print('Ctrl-C pressed in terminal... Exiting.')
         break
 
 win.Close()
