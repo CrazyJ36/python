@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+# For windows only
+
 import PySimpleGUI as sg
 from subprocess import call
 from os import curdir

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import PySimpleGUI as sg
 
 # This example would work great as A desktop

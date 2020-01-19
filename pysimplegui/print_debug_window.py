@@ -27,7 +27,7 @@ while True:
         Gui.Print('log button pushed')
 
     elif event == 'btn':
-        #  Gui.PrintClose() # DOESN'T WORK
+        Gui.PrintClose() # DIDN'T WORK in windows.
         pass
 
     elif event is None:
