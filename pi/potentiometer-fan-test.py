@@ -6,7 +6,7 @@ from time import sleep
 
 pin = DigitalOutputDevice(21)
 
-print("Turning fan on for 20 seconds")
+print("Turning fan on for 20 seconds, turn potentiometer to test.")
 pin.on()
 sleep(20)
 print("Turning fan off")
