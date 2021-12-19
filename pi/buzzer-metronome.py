@@ -5,12 +5,12 @@
 
 from gpiozero import Buzzer
 from time import sleep
-buzzer = Buzzer(2)
+buzzer = Buzzer(19)
 beat = 1
 while True:
   try:
     print(beat)
-    if beat is 1:
+    if beat == 1:
       buzzer.beep(0.004, 0.004, 5, False)
       sleep(0.5)
       beat = beat + 1
@@ -19,7 +19,7 @@ while True:
       sleep(0.5)
       buzzer.off()
       beat = beat + 1
-      if beat is 5:
+      if beat == 5:
         beat = 1
   except KeyboardInterrupt:
     print("\rExiting..")
