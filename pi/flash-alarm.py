@@ -8,8 +8,8 @@ print("Loading gpiozero..")
 from gpiozero import LED
 from time import sleep
 
-led1 = LED(24)
-led2 = LED(7)
+led1 = LED(18)
+led2 = LED(12)
 
 x = 1
 print("Flashing two leds like an alarm..")
