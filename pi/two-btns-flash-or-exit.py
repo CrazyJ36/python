@@ -3,13 +3,13 @@ from gpiozero import Button
 from gpiozero import LED
 from time import sleep
 
-btn = Button(23)
-btn2 = Button(27)
-led = LED(24)
+btn = Button(22)
+btn2 = Button(24)
+led = LED(16)
 
 print("""
 From left-to-right,
-press button 1 for led 1,
+press button 1 for led 4,
 button 2 to exit.
 """)
 

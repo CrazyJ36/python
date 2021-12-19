@@ -25,4 +25,6 @@ while(x < 5):
   x = x + 1
 
 print("Exiting..")
+led1.close()
+led2.close()
 exit()
