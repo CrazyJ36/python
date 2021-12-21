@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # import board, io, and adafruit drivers
 from board import SCL, SDA
 import busio
