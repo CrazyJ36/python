@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 print("Loading")
 import board
 import busio

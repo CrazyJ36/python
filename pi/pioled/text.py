@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # board stuff
 from board import SCL, SDA
 from busio import I2C

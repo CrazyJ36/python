@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from board import SCL, SDA
 import busio
 import adafruit_ssd1306
