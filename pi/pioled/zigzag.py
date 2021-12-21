@@ -14,7 +14,7 @@ display.fill(0)
 display.show()
 
 def drawLine(x_value):
-  global x
+  global x # don't manipulate outside variables in funtion, define global here.
   global y
   x = x_value
   y = 16
