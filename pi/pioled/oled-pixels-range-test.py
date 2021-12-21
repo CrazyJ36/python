@@ -12,7 +12,7 @@ display.show()
 print("Showing horizontal range")
 x = 0
 while x < 129:
-  print("x: " + str(x), end=" ")
+  print(x)
   display.pixel(x, 0, 1)
   display.show()
   sleep(0.00001)
@@ -22,7 +22,7 @@ while x < 129:
 print("Showing vertical range")
 y = 0
 while y < 33:
-  print("y: " + str(y), end=" ")
+  print(y)
   display.pixel(0, y, 1)
   display.show()
   sleep(0.00001)
