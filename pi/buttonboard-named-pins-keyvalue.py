@@ -1,12 +1,11 @@
-
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 print("Loading")
 
 from gpiozero import ButtonBoard, Button
 from time import sleep
 
-btns = ButtonBoard(btn1=22, btn2=24, btn3=25, btn4=5)
+btns = ButtonBoard(btn1=17, btn2=25, btn3=24, btn4=16)
 
 print("""
 Press any button, will print list of all button device values.

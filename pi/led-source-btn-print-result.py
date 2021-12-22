@@ -5,8 +5,8 @@ print("Loading...")
 from gpiozero import ButtonBoard, LEDBoard
 from time import sleep
 
-btns = ButtonBoard(button1 = 22, button2 = 24, button3 = 25, button4 = 5)
-leds = LEDBoard(led1 = 23, led2 = 18, led3 = 12, led4 = 16)
+btns = ButtonBoard(button1 = 17, button2 = 25, button3 = 24, button4 = 16)
+leds = LEDBoard(led1 = 4, led2 = 18, led3 = 6, led4 = 13)
 
 # Turns LEDBoard and ButtonBoard into A corresponding grid.
 leds.source = btns
