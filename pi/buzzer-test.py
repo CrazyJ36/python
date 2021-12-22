@@ -4,3 +4,6 @@ from gpiozero import Buzzer
 
 bz = Buzzer(21)
 bz.beep(0.01,0.01,5, False)
+bz.off()
+bz.close()
+exit()
