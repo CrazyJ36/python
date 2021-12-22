@@ -18,7 +18,7 @@ y = 16
 display.pixel(x, y, 1)
 display.show()
 
-print("Pixel showing, press button 1 or button 2 to move it.\nCtrl-C to exit...")
+print("Pixel showing, press button 1 or button 4 to move it.\nCtrl-C to exit...")
 try:
   while btns.wait_for_press:
     if btns[0].is_pressed:
