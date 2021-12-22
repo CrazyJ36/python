@@ -11,7 +11,7 @@ from time import sleep
 # 4. Connect emitter pin of transistor to A ground pin of raspberry pi.
 # 5. Set gpio pin HIGH or LOW to turn fan on/off.
 
-pin = DigitalOutputDevice(21)
+pin = DigitalOutputDevice(27)
 
 print("Turning fan on for 5 seconds")
 pin.on()
