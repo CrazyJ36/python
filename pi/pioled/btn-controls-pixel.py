@@ -22,12 +22,13 @@ print("Pixel showing, press button 1 or button 4 to move it.\nCtrl-C to exit..."
 try:
   while btns.wait_for_press:
     if btns[0].is_pressed:
-      display.fill(0)
+      # turning off current pixel
+      display.pixel(x, y, 0)
       x = x - 1
       display.pixel(x, y, 1)
       display.show()
     elif btns[1].is_pressed:
-      display.fill(0)
+      display.pixel(x, y, 0)
       x = x + 1
       display.pixel(x, y, 1)
       display.show()
