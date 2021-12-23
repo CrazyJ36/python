@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+print("Loading...")
 import board
 import busio
 import adafruit_ssd1306
@@ -28,43 +29,64 @@ display.show()
 
 # circle(center_x, center_y, radius, color). Draws circle at the given midpoint location.
 
-# rect(left_top_corner__position, lef_top_corner_postition, width, height, color). Draws an open rectangle with A 1 pixel outline.
-
-# line(x_start, y_start, x_end, y_end, color). Draws line using start and end grid points.
+# rect(left_top_corner__position, lef_top_corner_postition, width, height, color).
+# Draws an open rectangle with A 1 pixel outline.
 
 # blit(). Not yet implemented.
 
-# scroll(x_change, y_change). Shifts current frambuffer, x and y specify change in their current axis.
+def scrollTest():
+  # create character
+  display.rect(20, 16, 30, 10, 1)
+  display.show()
+  # scroll(x_change, y_change).
+  # moves framebuffer by A positive or negative numer of pixels along the x or y axis. don't move it too much
+  # or framebuffer seems to overlap previous drawings. Plus this slow even when not using time.sleep() at all.
+  move_count = 0
+  while move_count < 5:
+    display.scroll(5, 0)
+    display.show()
+    move_count = move_count + 1
 
-# text(string, x_position, y_position, color, font_name="font.ttf", size=1). Must download the default font file
-# from https://github.com/adafruit/Adafruit_CircuitPython_framebuf/raw/main/examples/font5x8.bin
-# IF size of this font file from running 'ls -l' doesn't equal 1282bytes, try downloading again by using the
-# link address attached to the 'Download' button on the Github page.
-
-def screenOff():
-  sleep(0.5)
   display.fill(0)
   display.show()
 
-def movingRectangle():
-  # create character
-  display.rect(20, 16, 30, 10, 1)
-  # move character
-  move_count = 0
-  while move_count < 10:
-    # move framebuffer by A positive or negative numer of pixels on the x or y axis. don't move it too much.
-    display.show()
-    display.scroll(5, 0)
-    move_count = move_count + 1
-
-def showText():
+def textTest():
+  # text(string, x_position, y_position, color, font_name="font.ttf", size=1). Must download the default font file
+  # from https://github.com/adafruit/Adafruit_CircuitPython_framebuf/raw/main/examples/font5x8.bin
+  # IF size of this font file from running 'ls -l' doesn't equal 1282bytes, try downloading again by using the
+  # link address attached to the 'Download' button on the Github page.
   display.text("Text", 64, 16, 1, size=1)
   display.show()
 
-print("Starting examples")
-showText()
-sleep(3)
+  sleep(1)
+  display.fill(0)
+  display.show()
+
+def lineTest():
+  # line(x_0, y_0, x_1, y_1, color). Draws line using specified starting(x_0, y_0)
+  # and ending(x_1, y_1) grid points.
+  display.line(64, 16, 80, 20, 1)
+  display.show()
+
+  sleep(1)
+  display.fill(0)
+  display.show()
+
+def fillTest():
+  display.fill(1)
+  display.show()
+  sleep(1)
+  display.invert(True)
+
+
+print("scrolling object...")
+scrollTest()
+print("showing text")
+textTest()
+print("showing line")
+lineTest()
+print("filling screen")
+fillTest()
 
 print("Exiting")
-screenOff()
 exit()

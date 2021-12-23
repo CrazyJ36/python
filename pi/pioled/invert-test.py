@@ -17,13 +17,12 @@ sleep(1)
 
 print("inverting")
 display.invert(True)
-#display.show()
 sleep(1)
 
 print("clearing screen")
 display.pixel(64, 16, 0)
 display.show()
-display.invert(False)
+display.invert(False) # undo invert
 print("Done")
 
 
