@@ -14,4 +14,5 @@ display.show()
 # create and show pixel.
 # parameters are (x_position, y_position, pixel_color(0=black, 1=white)
 display.pixel(0,0,1)
+
 display.show()
