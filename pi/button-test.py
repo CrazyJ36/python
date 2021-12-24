@@ -3,7 +3,7 @@
 from gpiozero import Button
 from time import sleep
 
-btn = Button(16)
+btn = Button(17)
 
 print("Press btn...")
 while True:
