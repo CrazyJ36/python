@@ -1,19 +1,19 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 print("Loading gpiozero")
 
 from gpiozero import LEDBoard, ButtonBoard
 from signal import pause
 
-leds = LEDBoard(18,24,11,12,7,16)
-btns = ButtonBoard(23,27,22,25,9,5)
+leds = LEDBoard(4, 18, 6, 13)
+btns = ButtonBoard(17, 25, 24, 16)
 
-print("Press the soft button that is closest to any of the middle row LEDs, LED will light...")
+print("Press A button, closest LED will light...")
 print("Ctrl-C to exit\n")
 
 while True :
   try:
-    leds.source = btns.values
+    leds.source = btns
     pause()
   except KeyboardInterrupt:
     print("\rExiting..")

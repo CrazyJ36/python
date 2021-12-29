@@ -4,7 +4,7 @@ from gpiozero import TonalBuzzer
 from gpiozero.tones import Tone
 from time import sleep
 
-buzzer = TonalBuzzer(pin=19, initial_value=None, mid_tone=Tone('A4'), octaves=1)
+buzzer = TonalBuzzer(pin=21, initial_value=None, mid_tone=Tone('A4'), octaves=1)
 
 print("Playing: A4...")
 buzzer.play(Tone("A4"))

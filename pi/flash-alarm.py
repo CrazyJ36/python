@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 # requires to install python3-gpiozero
 # flashes A few leds
@@ -8,8 +8,8 @@ print("Loading gpiozero..")
 from gpiozero import LED
 from time import sleep
 
-led1 = LED(18)
-led2 = LED(12)
+led1 = LED(4)
+led2 = LED(18)
 
 x = 1
 print("Flashing two leds like an alarm..")

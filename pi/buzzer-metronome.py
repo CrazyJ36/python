@@ -8,28 +8,42 @@
 print("Loading...")
 from gpiozero import Buzzer, LEDBoard
 from time import sleep
-from sys import argv
+from sys import argv, stdout
 
-buzzer = Buzzer(19)
-leds = LEDBoard(23, 18, 12, 16)
+buzzer = Buzzer(21)
+leds = LEDBoard(4, 18, 6, 13)
+usage = "You forgot to specify the tempo. Use as:\n$ ./buzzer-metronome.py [0.1-1]"
+try:
+  bpm = float(argv[1])
+except IndexError:
+  print(usage)
+  exit()
 
-print("Usage: $ ./buzzer-metronome.py float(0.1-1)")
-bpm = float(argv[1])
+print("Starting, press Ctrl-C to exit.")
 beat = 1
+measure_count = 1
+print("measure: 1")
 
 def flashBeep(led_num):
-  print(beat)
+  stdout.write("\33[2K\r" + str(beat))
+  stdout.flush()
   leds[led_num].on()
   buzzer.on()
   sleep(bpm)
   leds[led_num].off()
   buzzer.off()
+  stdout.write("\33[2K\r")
 
 while True:
   try:
     if beat == 1:
-      flashBeep(0)
+      stdout.write("\33[2K\r" + str(beat))
+      leds[0].on()
+      buzzer.beep(0.009, 0.009, 1)
+      sleep(bpm)
+      leds[0].off()
       beat = beat + 1
+      stdout.write("\33[2k\r")
     elif beat == 2:
       flashBeep(1)
       beat = beat + 1
@@ -40,7 +54,9 @@ while True:
       flashBeep(3)
       beat = beat + 1
     elif beat == 5:
-        beat = 1
+      measure_count = measure_count + 1
+      print(measure_count)
+      beat = 1
 
   except KeyboardInterrupt:
     print("\rExiting..")
