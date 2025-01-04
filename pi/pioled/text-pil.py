@@ -20,7 +20,7 @@ draw = ImageDraw.Draw(image)
 
 # Load A font. Parameters(str(ttf_font_path), int(font_size))
 # font size with A single 'Z' char can go up to 34, 28 for the word 'CrazyJ36'.
-font = ImageFont.truetype("/usr/share/fonts/truetype/arial.ttf", 28)
+font = ImageFont.truetype("arial.ttf", 28)
 
 # buffer the text in the PIL way
 draw.text((0, 0), "CrazyJ36", font=font, fill=255)
