@@ -1,2 +1,4 @@
 Hello World.
 This is A text file.
+
+New line
